@@ -1,0 +1,62 @@
+.footer {
+  //font-family: 'Uni Sans', sans-serif;
+  color: $white;
+  background-color: $black;
+  min-height: 480px;
+  padding: 11px 16px 16px;
+  @include media-breakpoint-up(sm) {
+    padding: 11px 32px 16px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 11px 150px 16px;
+  }
+
+  &__heading {
+    opacity: .6;
+  }
+
+  &__contact-list {
+    @include media-breakpoint-up(sm) {
+      column-count: 2;
+    }
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+    li {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include media-breakpoint-up(sm) {
+        &:nth-child(2n) {
+          margin-bottom: 0;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__info-list {
+    column-count: 2;
+    li {
+      &:last-child {
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__social-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 32px;
+    @include media-breakpoint-up(md) {
+      width: 16px;
+      height: 16px;
+      margin-right: 0;
+    }
+  }
+}

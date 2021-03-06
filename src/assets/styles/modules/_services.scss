@@ -1,0 +1,22 @@
+.services {
+  &__buy {
+    width: 60px;
+  }
+
+  &__margin {
+    margin-bottom: 40px;
+  }
+
+  &__back {
+    display: block;
+    color: $main !important;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 43px;
+    svg {
+      transform: rotate(90deg);
+      color: $main;
+      margin-right: 25px;
+    }
+  }
+}

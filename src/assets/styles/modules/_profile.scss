@@ -1,0 +1,48 @@
+.profile {
+  max-width: $sidebar-width;
+  &__avatar {
+    display: inline-flex;
+    border-radius: 50%;
+    background-color: $secondary;
+    color: $active;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__collapse-button {
+    padding: 0 !important;
+    color: $main;
+    font-weight: 600;
+
+    svg {
+      transition: transform .2s ease;
+    }
+
+    &:hover {
+      color: $main;
+    }
+
+    &.not-collapsed {
+      color: $primary;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__actions {
+    font-weight: 400;
+    margin-bottom: 20px;
+    display: block;
+    color: $main !important;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+}

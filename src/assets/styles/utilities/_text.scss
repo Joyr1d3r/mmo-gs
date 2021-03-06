@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/utilities/text";
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-main {
+  color: $main !important;
+}
+
+.text-active {
+  color: $active !important;
+}

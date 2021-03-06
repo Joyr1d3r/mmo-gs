@@ -1,0 +1,54 @@
+.dashboard {
+  &__promo-container {
+    background-image: url("assets/images/dashboard/Shadow.png"), url("assets/images/dashboard/model.svg"), url("assets/images/dashboard/bg.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left top, right bottom, left top;
+    background-size: cover, contain, cover;
+    color: $white;
+    width: 100%;
+    z-index: -1;
+    padding-bottom: 80px;
+    padding-top: $page-top-header-height;
+    @include media-breakpoint-up(lg) {
+      padding-top: $page-top-header-height + $page-top-footer-height;
+      padding-bottom: 48px;
+    }
+  }
+  &__promo-desc {
+    max-width: 500px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__promo-more {
+    width: 288px;
+    margin-bottom: 32px;
+    @include media-breakpoint-up(md) {
+      width: 260px;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__promo-category {
+    color: #FFFFFF;
+    opacity: 0.3;
+  }
+
+  &__promo-card {
+    max-height: 180px;
+    background-color: transparent;
+    display: block;
+    opacity: .4;
+    transition: opacity .2s ease;
+    .tag {
+      max-width: 75px;
+    }
+    &.card-active {
+      opacity: 1;
+    }
+  }
+}

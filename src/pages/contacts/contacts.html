@@ -1,0 +1,30 @@
+<main class="bg-white">
+    <div class="container-lg">
+        <h2 class="h1 text-uppercase font-weight-bold contacts-page__heading text-center">Contacts</h2>
+        <div class="row">
+            <div class="col-120 col-sm-60 col-lg-40 mt-3 mb-3" v-for="item in contacts">
+                <div class="card contacts-page__card justify-content-center">
+                    <img class="d-flex align-self-end"
+                         :src="item.iconPath"
+                         :alt="item.name"
+                         width="150"
+                         height="150">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <p class="contacts-page__social-heading text-primary text-uppercase mb-2">{{item.name}}</p>
+                        <p class="font-weight-bolder d-flex flex-grow-1">{{item.text}}</p>
+                        <router-link :to="item.instruction.path"
+                                     class="text-primary font-weight-bolder"
+                                     v-if="item.instruction"> {{item.instruction.label}}</router-link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contacts-page__form-container">
+        <div class="container-md">
+            <h2 class="h1 text-uppercase font-weight-bold text-center mb-3 pt-5">You have questions?</h2>
+            <p class="title text-center mb-5">Get in touch with us!</p>
+            <contact-us></contact-us>
+        </div>
+    </div>
+</main>

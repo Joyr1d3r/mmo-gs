@@ -1,0 +1,25 @@
+<div class="bg-white position-relative">
+    <div class="container-lg">
+        <div class="row align-items-center blog__header">
+            <div class="col mr-auto">
+                <h2 class="h1 text-uppercase font-weight-bold">blog</h2>
+            </div>
+            <div class="col-auto">
+                <router-link to="/blog">
+                    <button class="btn btn-outline-primary text-uppercase font-weight-bolder">
+                        show all
+                    </button>
+                </router-link>
+            </div>
+        </div>
+        <div class="row blog__overflow-container flex-nowrap flex-column flex-sm-row">
+            <icon-next class="blog__icon-previous d-none d-xl-block"/>
+            <div class="col-120 col-sm-60 col-xl-40 blog__card-container"
+                 v-for="(item, idx) in posts"
+                 :class="{'d-none d-sm-flex': idx > 1}">
+                <post-card :item="item"/>
+            </div>
+            <icon-next type="right" class="blog__icon-next d-none d-xl-block"/>
+        </div>
+    </div>
+</div>

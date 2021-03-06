@@ -1,0 +1,41 @@
+@import '~bootstrap/scss/buttons';
+
+.btn {
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  @include hover() {
+    color: $white;
+    text-decoration: none;
+  }
+  &:focus, &.focus {
+    box-shadow: none;
+  }
+  &:disabled, .disabled {
+    opacity: .4;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    color: $white;
+    border: none;
+    transition: .3s ease-out;
+    @include hover-focus-active() {
+      background-color: lighten($value, 10%) !important;
+      color: $white !important;
+      outline: none;
+      box-shadow: none !important;
+    }
+    &:disabled, .disabled {
+      color: $white;
+    }
+  }
+}
+
+.btn-link:focus {
+  text-decoration: none;
+}
+
+.btn-lg {
+  font-weight: bold;
+}

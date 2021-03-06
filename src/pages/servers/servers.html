@@ -1,0 +1,20 @@
+<main class="container-lg">
+    <div v-for="item in servers">
+        <h3 class="text-uppercase mb-4 mt-3">{{item.name}}</h3>
+        <div class="row mb-5">
+            <div class="col-120 col-sm-60 col-lg-40 mb-4" v-for="option in item.options">
+                <router-link :to="'/servers/'+ option.pathname">
+                    <div class="card">
+                        <img :src="option.img" :alt="option.name" class="card-img-top servers__card-img">
+                        <div class="card-img-overlay d-flex justify-content-center align-items-center h-75">
+                            <img :src="option.logo" :alt="option.name + ' logo'">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-title">{{option.name}}</p>
+                        </div>
+                    </div>
+                </router-link>
+            </div>
+        </div>
+    </div>
+</main>

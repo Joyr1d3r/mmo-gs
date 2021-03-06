@@ -1,0 +1,17 @@
+.contact-us {
+  &__form-container {
+    border-radius: $border-radius-sm;
+    padding: 24px;
+    max-width: 815px;
+    margin: 0 auto;
+    @include media-breakpoint-up(sm) {
+      padding: 32px;
+    }
+  }
+
+  &__captcha {
+    font-size: 10px;
+    padding: 0 !important;
+    color: $main !important;
+  }
+}

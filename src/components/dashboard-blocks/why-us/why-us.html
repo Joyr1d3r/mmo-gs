@@ -1,0 +1,12 @@
+<div class="why-us__container">
+    <div class="container-lg py-0">
+        <h2 class="h1 text-uppercase font-weight-bold">why mmo-gs?</h2>
+        <div class="row">
+            <div class="col-120 col-sm-60 col-lg-40 why-us__card" v-for="item in advantages">
+                <img :src="item.icon" :alt="item.title">
+                <h3 class="text-uppercase font-weight-bold mt-4 mb-3">{{item.title}}</h3>
+                <p class="why-us__desc">{{item.desc}}</p>
+            </div>
+        </div>
+    </div>
+</div>

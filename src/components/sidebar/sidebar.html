@@ -1,0 +1,43 @@
+<nav class="sidebar d-flex flex-column flex-xl-row" :class="{'active': sidebarActive}">
+    <search-input class="order-xl-1 sidebar__search-input mb-4 mr-xl-4 mb-xl-0"></search-input>
+    <profile-dropdown class="d-xl-none sidebar__item mb-4" icon="icon-down" type="collapse"></profile-dropdown>
+    <div class="d-flex flex-grow-1 flex-column flex-xl-row">
+        <div v-for="item in menu" class="mb-4 mb-xl-0 mr-xl-4 d-flex flex-column">
+            <router-link :to="item.path" v-if="!item.options" class="sidebar__item">{{item.name}}</router-link>
+            <b-dropdown v-else-if="item.options && !sidebarActive"
+                        no-caret
+                        variant="link"
+                        class="sidebar__item">
+                <template #button-content>
+                    {{item.name}}
+                    <icon-down class="ml-2"></icon-down>
+                </template>
+                <b-dropdown-item v-for="option in item.options">
+                    <router-link :to="option.path">
+                        {{option.name}}
+                    </router-link>
+                </b-dropdown-item>
+            </b-dropdown>
+            <a class="sidebar__item d-flex align-items-center"
+               v-b-toggle
+               @click.prevent
+               v-else-if="item.options && sidebarActive"
+               :href="'#'+item.name">
+                {{item.name}}
+                <icon-down class="ml-2 sidebar__item-icon"></icon-down>
+            </a>
+            <b-collapse :id="item.name" class="mt-4">
+                <router-link :to="option.path"
+                             v-for="option in item.options"
+                             class="sidebar__item-sub">{{option.name}}</router-link>
+            </b-collapse>
+        </div>
+    </div>
+    <button class="btn btn-primary tag-lg order-xl-2 d-flex w-auto align-items-center px-3">
+            <span class="d-flex flex-grow-1">
+                <icon-cart class="mr-3"></icon-cart>
+                Cart
+            </span>
+        <span class="sidebar__cart-amount">{{cartAmount | cartAmountFilter}} </span>
+    </button>
+</nav>

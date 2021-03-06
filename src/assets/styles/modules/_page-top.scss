@@ -1,0 +1,27 @@
+.page-top {
+  height: $page-top-header-height;
+  background-color: rgba(22, 24, 27, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 0 $page-top-gutter-sm;
+  @include media-breakpoint-up($sidebar-breakpoint) {
+    padding: 0 $page-top-gutter;
+  }
+}
+
+.page-top-footer {
+  height: 90px;
+  position: fixed;
+  top: $page-top-header-height;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(22, 24, 27, 0.6);
+  padding: 0 $page-top-gutter-sm;
+  @include media-breakpoint-up($sidebar-breakpoint) {
+    padding: 0 $page-top-gutter;
+  }
+}

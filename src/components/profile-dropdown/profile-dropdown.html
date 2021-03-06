@@ -1,0 +1,35 @@
+<div v-if="type === 'collapse'">
+    <button class="btn profile__collapse-button d-flex align-items-center"
+            v-b-toggle.profile-content
+            @click.prevent>
+        <span class="profile__avatar mr-2">
+                <img v-if="user.avatar" :src="user.avatar" :alt="user.name">
+                <span v-else>{{ user.firstName.substr(0, 1) }}{{ user.secondName.substr(0, 1) }}</span>
+            </span>
+        <span class="text-truncate">{{user.firstName}} {{user.secondName}}</span>
+        <component :is="icon" class="ml-2"></component>
+    </button>
+    <b-collapse id="profile-content" class="mt-4">
+        <router-link :to="action.path" v-for='action in actions'
+                     class="profile__actions">{{action.name}}</router-link>
+    </b-collapse>
+</div>
+<b-dropdown v-else
+            class="profile"
+            variant="link"
+            no-caret
+            right>
+    <template #button-content>
+        <span class="profile__avatar mr-2">
+            <img v-if="user.avatar" :src="user.avatar" :alt="user.name">
+            <span v-else>{{ user.firstName.substr(0, 1) }}{{ user.secondName.substr(0, 1) }}</span>
+        </span>
+        <span class="text-truncate">{{user.firstName}} {{user.secondName}}</span>
+        <component :is="icon" class="ml-5"></component>
+    </template>
+    <b-dropdown-item v-for='action in actions'>
+        <router-link :to="action.path">
+            {{action.name}}
+        </router-link>
+    </b-dropdown-item>
+</b-dropdown>

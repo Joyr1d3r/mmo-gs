@@ -1,0 +1,9 @@
+<svg width="359" height="190" viewBox="0 0 359 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0" x="0" y="0" width="359" height="190">
+        <rect width="359" height="190" rx="6" fill="white"/>
+    </mask>
+    <g mask="url(#mask0)">
+        <circle cx="359" cy="190" r="93" fill="#90CC61"/>
+    </g>
+    <path d="M9 18L15 12L9 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(310, 140)"/>
+</svg>

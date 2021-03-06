@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/dropdown";
+
+.dropdown {
+  &-menu {
+    background-color: $main;
+  }
+  &-item {
+    width: unset;
+    color: $white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: all .2s ease-out;
+    &:hover {
+      background-color: $black;
+      color: $primary;
+    }
+  }
+  &-toggle {
+    font-weight: 600;
+    font-size: $small-font-size;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.btn.dropdown-toggle {
+  padding: 0;
+}
+
+.dropdown.show {
+  > .btn.dropdown-toggle {
+    color: $primary;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="our-services__container bg-white">
+    <div class="container-lg">
+        <h2 class="our-services__heading text-uppercase font-weight-bold h1">our services</h2>
+        <b-form-select v-model="selected"
+                @change="passData(servers.find(el => el.value === selected).services, selected)"
+                class="form-control mb-4 d-sm-none"
+                :options="servers">
+        </b-form-select>
+        <div class="our-services__navigation-wrapper position-relative d-none d-sm-block mb-4">
+            <div class="our-services__navigation nav nav-pills">
+                <div class="nav-link our-services__navigation-item"
+                     :class="{'active': idx === activeItem}"
+                     @click="passData(option.services, idx)"
+                     v-for="(option, idx) in servers"> {{option.text}} </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-120 col-sm-60 col-lg-40 col-xl-30 mb-4 d-xl-inline-flex"
+                 v-if="services"
+                 v-for="(item, idx) in services"
+                 :key="idx">
+                <services-card :item="item"></services-card>
+            </div>
+        </div>
+    </div>
+</div>

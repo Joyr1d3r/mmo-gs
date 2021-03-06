@@ -1,0 +1,13 @@
+<ul class="contacts-list">
+    <li v-for="item in contacts" class="contacts-list__item">
+        <component :is="item.icon" class="contacts-list__icon" :class="iconClass"></component>
+        <a href="/" target="_blank" :class="linkClass">{{item.text}}</a>
+    </li>
+    <li class="contacts-list__item">
+        <icon-trustpilot class="contacts-list__icon"></icon-trustpilot>
+        <span>
+            <span class="font-weight-bold text-white"> {{reviewsNumber}} reviews </span>
+            <a href="/" target="_blank" :class="linkClass">on Trustpilot</a>
+        </span>
+    </li>
+</ul>

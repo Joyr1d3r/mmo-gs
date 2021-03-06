@@ -1,0 +1,23 @@
+@import "~bootstrap/scss/reboot";
+main {
+  margin-top: $page-top-header-height;
+  padding-top: 24px;
+  @include media-breakpoint-up(lg) {
+    margin-top: $page-top-header-height + $page-top-footer-height;
+    padding-top: 24px;
+  }
+}
+
+svg {
+  box-sizing: unset;
+}
+
+a{
+  transition: .2s ease;
+  &:visited {
+    color: $white;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

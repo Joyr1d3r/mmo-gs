@@ -1,0 +1,12 @@
+<main class="container-lg">
+    <router-link to="/servers" class="services__back text-uppercase">
+        <icon-down></icon-down> back to servers
+    </router-link>
+    <h1 class="text-uppercase font-weight-bold text-center services__margin">Our services for wow classic</h1>
+    <div class="row">
+        <div class="col-120 col-sm-60 col-lg-40 col-xl-30 mb-4 d-inline-flex"
+             v-for="item in services">
+            <services-card :item="item"></services-card>
+        </div>
+    </div>
+</main>

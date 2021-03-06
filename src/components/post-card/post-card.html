@@ -1,0 +1,8 @@
+<div class="card blog__card h-100">
+    <img :src="item.img" :alt="item.title" class="card-img-top">
+    <div class="card-body px-0 d-flex flex-column">
+        <p class="card-text mb-2"><small class="text-active">{{item.date}}</small></p>
+        <h4 class="card-title text-uppercase font-weight-bold d-flex flex-grow-1 mb-2">{{ item.title }}</h4>
+        <p class="blog__card-text card-text">{{ item.desc }}</p>
+    </div>
+</div>

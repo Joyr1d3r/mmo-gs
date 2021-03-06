@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/pagination";
+
+.page-link {
+  border: none;
+  color: $main;
+  border-radius: $border-radius;
+  padding: 0.4rem 0.75rem;
+  background-color: transparent;
+  &:hover {
+    color: $main;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.page-item.active {
+  .page-link {
+    border: none;
+  }
+}
+
+.page-item.disabled {
+  .page-link {
+    background-color: transparent;
+    opacity: .15;
+  }
+}

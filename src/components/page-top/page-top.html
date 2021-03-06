@@ -1,0 +1,20 @@
+<header>
+    <div class="page-top d-flex align-items-center">
+        <div class="d-flex flex-grow-1">
+            <router-link to="/"><logo :width="91" :height="16" class="d-lg-none"/></router-link>
+            <contacts class="d-none d-lg-flex" linkClass="default-link" iconClass="text-primary"></contacts>
+        </div>
+        <btn-menu class="d-lg-none" :active="shownMobileMenu" @toggle="setMobileMenu" />
+        <profile-dropdown class="d-none d-lg-flex" icon="icon-more"></profile-dropdown>
+    </div>
+    <div class="page-top-footer d-none d-lg-flex align-items-center">
+        <div class="row w-100">
+            <div class="col-auto">
+                <router-link to="/"><logo :width="164" :height="29"/></router-link>
+            </div>
+            <div class="col-auto ml-auto ml-xl-0">
+                <btn-menu class="d-xl-none" :active="shownMobileMenu" @toggle="setMobileMenu" />
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,51 @@
+.blog {
+  &__card-container {
+    margin-top: 70px;
+    &:first-child {
+      margin-top: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      margin-top: 0;
+    }
+  }
+
+  &__card {
+    box-shadow: none;
+  }
+
+  &__card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  &__header {
+    margin-bottom: 28px;
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__overflow-container {
+    overflow: hidden;
+    @include media-breakpoint-up(sm) {
+      overflow: auto;
+    }
+  }
+
+  &__icon-previous {
+    position: absolute;
+    top: calc(50% - 26px);
+    left: calc((100% - 1140px - #{$grid-gutter-width * 2})/4);
+    z-index: 1;
+  }
+
+  &__icon-next {
+    position: absolute;
+    right: calc((100% - 1140px - #{$grid-gutter-width * 2})/4);
+    top: calc(50% - 26px);
+    z-index: 1;
+  }
+}

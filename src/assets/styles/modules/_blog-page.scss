@@ -1,0 +1,12 @@
+.blog-page {
+  &__card-container {
+    margin-top: 32px;
+    @include media-breakpoint-up(xl) {
+      margin-top: 64px;
+    }
+  }
+
+  &__pagination {
+    margin-top: 100px;
+  }
+}

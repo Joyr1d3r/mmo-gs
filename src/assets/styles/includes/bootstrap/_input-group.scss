@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/input-group";
+
+.input-group {
+  width: auto;
+  &:focus-within {
+    .input-group-text, input {
+      border-color: $main;
+      color: $main;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border-left: none;
+    transition: all .1s ease;
+    &:focus {
+      background-color: transparent;
+      outline: none;
+      &::placeholder {
+        color: $main;
+      }
+    }
+  }
+
+  &-prepend {
+    .input-group-text {
+      transition: all .1s ease;
+      background-color: transparent;
+      border-right: none;
+      color: $default;
+      padding-right: 0;
+    }
+  }
+}
+

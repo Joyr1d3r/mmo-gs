@@ -1,0 +1,59 @@
+@import '~bootstrap/scss/type';
+
+h1, .h1 {
+  font-size: $h2-font-size;
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-font-size;
+  }
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  @include media-breakpoint-up(xl) {
+    font-size: 28px;
+  }
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 28px;
+  @include media-breakpoint-up(sm) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.label {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.tag {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.tag-lg {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+small,
+.small {
+  @include font-size($small-font-size);
+  font-weight: $font-weight-normal;
+}
+
+

@@ -1,0 +1,10 @@
+<main class="container-lg">
+    <h1 class="text-uppercase font-weight-bold mb-4 text-center">blog</h1>
+    <filter-component :options="options"></filter-component>
+    <div class="row">
+        <div class="col-120 col-sm-60 col-lg-40 blog-page__card-container" v-for="item in posts">
+            <post-card :item="item" class="bg-light"/>
+        </div>
+    </div>
+    <pagination class="blog-page__pagination"/>
+</main>

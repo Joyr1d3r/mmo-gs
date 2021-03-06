@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/nav";
+
+.nav-link {
+  transition: .2s ease-out;
+  background: $background;
+  color: $main;
+  padding: 12px 20px;
+  font-weight: 600;
+  margin-right: 11px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

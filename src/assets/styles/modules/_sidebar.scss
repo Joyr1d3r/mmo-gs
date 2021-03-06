@@ -1,0 +1,108 @@
+.sidebar {
+  overflow: auto;
+  width: $sidebar-width;
+  background-color: $white;
+  position: fixed;
+  padding: 24px;
+  top: $page-top-header-height;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transform: translate3d(150%, 0, 0);
+  transition: transform .3s ease-in-out;
+
+  @include media-breakpoint-up(lg) {
+    top: $page-top-header-height + $page-top-footer-height;
+  }
+
+  @include media-breakpoint-up($sidebar-breakpoint) {
+    padding: 0 50px 0 0;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    width: auto;
+    background-color: transparent;
+    left: 267px;
+    transform: none;
+    height: $page-top-footer-height;
+    top: $page-top-header-height;
+  }
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+
+    @include media-breakpoint-up($sidebar-breakpoint) {
+      transform: none;
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+    color: $main !important;
+    line-height: 1.65;
+    font-weight: 600;
+    transition: color .2s ease;
+    @include media-breakpoint-up($sidebar-breakpoint) {
+      color: $white !important;
+    }
+    &.not-collapsed {
+      color: $primary !important;
+      .sidebar__item-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    > .btn.dropdown-toggle {
+      color: $main;
+      font-size: 16px;
+      @include media-breakpoint-up($sidebar-breakpoint) {
+        color: $white;
+      }
+    }
+  }
+
+  &__item-icon {
+    transition: transform .2s ease;
+  }
+
+  &__item-sub {
+    color: $main !important;
+    display: block;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__search-input {
+    @include media-breakpoint-down(lg) {
+      width: 100% !important;
+      .input-group-text, input {
+        border: none;
+        color: $secondary;
+      }
+      input::placeholder {
+        color: $secondary;
+      }
+      .input-group-text {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__cart-amount {
+    font-size: 12px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $primary;
+  }
+}

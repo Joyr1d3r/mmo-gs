@@ -1,0 +1,19 @@
+
+<div class="row align-items-center">
+    <div class="col-120 col-sm mr-sm-auto">
+        <b-pagination :total-rows="30"
+                      :per-page="5"
+                      first-number
+                      last-number>
+            <template #prev-text>
+                <icon-chevron style="transform: rotate(180deg)"></icon-chevron>
+            </template>
+            <template #next-text>
+                <icon-chevron></icon-chevron>
+            </template>
+        </b-pagination >
+    </div>
+    <div class="col-120 col-sm-auto mr-sm-auto">
+        <p class="text-active m-0">Showing 1-12 of 176 results</p>
+    </div>
+</div>

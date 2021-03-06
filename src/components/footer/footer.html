@@ -1,0 +1,55 @@
+<footer class="footer">
+    <div class="row py-5 border-bottom align-items-center">
+        <div class="col-120 col-sm-auto">
+           <router-link to="/"><logo :width="173" :height="57"></logo></router-link>
+        </div>
+        <div class="col-120 col-sm-auto ml-sm-auto mt-5 mt-sm-0">
+            <contacts linkClass="text-primary text-underline" class="footer__contact-list"></contacts>
+        </div>
+    </div>
+    <div class="row py-4 border-bottom">
+        <div class="col-120 col-sm-80 col-md-60 mb-4 mb-sm-0">
+            <p class="footer__heading">Information</p>
+            <ul class="footer__info-list list-unstyled d-inline d-sm-block">
+                <li v-for="item in information" class="d-inline-block mr-3 d-sm-block mr-sm-0 mb-2">
+                    <router-link :to="item.path"> {{item.name}}</router-link>
+                </li>
+            </ul>
+        </div>
+        <div class="col-120 col-sm-40">
+            <p class="footer__heading">Navigation</p>
+            <ul class="footer__info-list list-unstyled d-inline d-sm-block">
+                <li v-for="item in navigation" class="d-inline-block mr-3 d-sm-block mr-sm-0 mb-2">
+                    <router-link :to="item.path">{{item.name}}</router-link>
+                </li>
+            </ul>
+        </div>
+        <div class="col-120 col-md-20 mt-4 mt-md-0">
+            <p class="footer__heading d-none d-md-block">Socials</p>
+            <ul class="footer__info-list list-unstyled d-flex justify-content-center flex-md-column">
+                <li v-for="item in social" class="mb-md-2">
+                    <a :href="item.path" target="_blank" class="d-flex justify-content-between">
+                        <span class="d-none d-md-inline">{{item.name}}</span>
+                        <component :is="item.icon" class="footer__social-icon"></component>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row py-4 align-items-center">
+        <div class="col-120 col-lg d-flex flex-wrap justify-content-center align-items-center order-lg-1 mb-4 mb-lg-0">
+            <banners class="ml-lg-auto"></banners>
+            <banner-bizrate style="padding-left: 14px"></banner-bizrate>
+            <banner-trustpilot style="padding-left: 14px"></banner-trustpilot>
+        </div>
+        <div class="col-120 col-lg-auto d-flex flex-wrap justify-content-center">
+            <p class="footer__heading d-inline-block mb-3 mb-sm-0 mr-xl-5">Copyright All Rights Reserved © 2016-2020</p>
+            <div class="d-md-inline-block ml-3">
+                <a href="/" target="_blank" class="text-underline footer__heading mr-3 mr-xl-5">
+                    Privacy Policy
+                </a>
+                <router-link to="/" class="text-underline footer__heading">Sitemap</router-link>
+            </div>
+        </div>
+    </div>
+</footer>

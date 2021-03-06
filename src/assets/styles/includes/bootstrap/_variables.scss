@@ -1,0 +1,88 @@
+// Type
+
+$font-family-sans-serif: 'SF Compact Display', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$h1-font-size: 40px;
+$h2-font-size: 28px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+
+$small-font-size: 14px;
+
+$font-weight-bolder: 500;
+
+$headings-margin-bottom: 0;
+
+// Grid
+
+$grid-columns: 120;
+$grid-gutter-width: 32px;
+
+  // Colors
+
+$primary: #90CC61;
+$secondary: #555555;
+$success: #52B280;
+$warning: #FFF500;
+$error: #FB4E4E;
+
+$white: #FFFFFF;
+$default: #CACCCF;
+$active: #A0A4A8;
+$background: #F8F9F8;
+$main: #333333;
+$black: #202226;
+
+$link-color: $white;
+
+$body-bg: $background;
+$body-color: $main;
+
+  // Border
+
+$border-color: $main;
+
+//Shadows
+
+$box-shadow: 0px 60px 100px rgba(4, 4, 4, 0.04);
+
+//Inputs & buttons
+
+$input-btn-padding-y: 0.6875rem;
+$input-btn-padding-x: 2rem;
+
+$input-btn-padding-y-sm: .25rem;
+$input-btn-padding-x-sm: 1rem;
+
+$input-btn-padding-y-lg: 1rem;
+$input-btn-padding-x-lg: 2rem;
+
+
+$btn-border-radius-sm: 6px;
+
+// Borders
+
+$border-radius: .25rem;
+
+// Forms
+
+$input-padding-y: .5rem;
+$input-padding-x: 1rem;
+$input-border-color: $default;
+$input-height: unset;
+$input-placeholder-color: $default;
+$input-color: $black;
+$input-disabled-bg:  $white;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $input-border-color;
+
+// Modules
+
+$sidebar-width: 235px;
+$page-top-header-height: 50px;
+$page-top-footer-height: 90px;
+$page-top-gutter-sm: 32px;
+$page-top-gutter: 50px;
+$sidebar-breakpoint: xl;
+
+
